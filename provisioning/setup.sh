@@ -11,3 +11,9 @@ echo "deb https://dl.bintray.com/rabbitmq/debian $(lsb_release -sc) main" | sudo
 sudo apt update
 sudo apt -y install rabbitmq-server
 
+
+# create environment
+python3 -m venv env
+source env/bin/activate
+pip install -r provisioning/requirements.txt
+
